@@ -1,0 +1,29 @@
+{
+  "name": "safe-area-css-demo",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/xudafeng/safe-area-css-demo.git"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "eslint": "*",
+    "eslint-plugin-mocha": "^4.11.0",
+    "git-contributor": "*",
+    "husky": "*",
+    "mocha": "*",
+    "nyc": "*"
+  },
+  "scripts": {
+    "test": "nyc --reporter=lcov --reporter=text mocha",
+    "lint": "eslint . --fix",
+    "contributor": "git-contributor"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "license": "MIT"
+}
